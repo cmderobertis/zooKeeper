@@ -1,9 +1,13 @@
 public class Mammal {
-    private int energyLevel = 100;
+    private int energyLevel;
+    public static final int DEFAULT_ENERGY_LEVEL = 100;
 
-    int displayEnergy() {
+    public Mammal(int energyLevel) {
+        this.energyLevel = energyLevel;
+    }
+
+    void displayEnergy() {
         System.out.println("Energy: " + this.energyLevel);
-        return this.energyLevel;
     }
 
     int getEnergyLevel() {
